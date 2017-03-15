@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="main-container">
+    <text class="main-title">填写信息采集表</text>
+    <view class="main-con">
+        <view class="con-container">
+          <view class='con_item' wx:for="{{cons}}" wx:for-index="idx" wx:for-item="con">
+            <text class='con-name'>{{con.name}}</text>
+            <input bindtap="{{con.id}}" class='con-input' type="{{con.type}}" placeholder="{{con.input}}" />
+          </view>
+        </view>
+    </view>
+    </view>
+    <view class="btn-container">
+      <button formType="submit" class="next">下一步</button>
+      <button bindtap="back" class="back">返回</button>
+    </view>
+  </form>
+  
+</view>

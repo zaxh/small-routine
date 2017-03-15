@@ -1,0 +1,54 @@
+/**index.wxss**/
+page{
+  background: #F1F0F0;
+  box-sizing: border-box;
+}
+.main-container{
+  width: 100%;
+}
+.main-container .icon-container{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+.main-container icon{
+  display: block;
+  margin: 0 auto;
+}
+.main-container .main{
+  width: 100%;
+}
+.main-container .main .note-container{
+  width: 90%;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  padding: 40rpx 20rpx;
+  font-size: 36rpx;
+  color: #444;
+  background: #B2DEEA;
+}
+.main-container .note-container .note{
+  line-height: 55rpx;
+}
+.main-container .note-container .note.light{
+  color: #f00;
+}
+.btn-container{
+  width: 100%;
+  height: 300rpx;
+}
+.btn-container button{
+  width: 95%;
+  margin: 40rpx auto;
+}
+.btn-container button.agree{
+  background: #1AAD16;
+  color: #fff;
+  border: 2rpx solid #1AAD16;
+}
+.btn-container button.disagree{
+  background: transparent;
+  color: #1AAD16;
+  border: 2rpx solid #1AAD16;
+}

@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <view class="main-container">
+    <view class="main-item">
+        <text class="main-title">{{name}} 的信息已经填写完成，若还有其他人员请点击“继续添加人员”</text>
+        <button bindtap="addPerInfo" class="addPerInfo">继续添加人员</button>
+    </view>
+    <view class="main-item">
+        <text class="main-title">全部人员信息填写完成后，请点击“提交支付费用”</text>
+        <button bindtap="subPayMon" class="subPayMon">提交支付费用</button>
+    </view>  
+  </view>
+</view>

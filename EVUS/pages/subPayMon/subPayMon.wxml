@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <view class="main-container">
+    <view class="icon-container">
+      <icon type="info" size="150"/>
+    </view>
+    <view class="main">
+        <view class="note-container">
+          <text class="note light">声明：</text>
+          <text class="note">
+            我们将根据您填写的信息，为您在eVUS系统上进行正式登记。请您确认所有填写信息都是真实并且正确的，不存在任何虚假和伪造的声明或陈述，一旦确认提交，登记信息将不能再修改。
+          </text>
+          <text class="note">同时，您在eVUS上提交的登记申请将由美国政府审核并给出登记最终结果，代办方不对您在eVUS上登记的最终结果负责。</text>
+        </view>
+    </view>
+  </view>
+  <view class="btn-container">
+    <button bindtap="agree" class="agree">同意</button>
+    <button bindtap="disagree" class="disagree">不同意</button>
+  </view>
+</view>
+

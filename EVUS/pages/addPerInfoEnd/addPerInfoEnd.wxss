@@ -1,0 +1,34 @@
+/**index.wxss**/
+page{
+  background: #F1F0F0;
+}
+.main-container{
+  width: 100%;
+}
+.main-container .main-item{
+    width: 100%;
+    height: 200rpx;
+    padding-top: 100rpx;
+}
+.main-container .main-title{
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  color: #444;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+button{
+  width: 95%;
+}
+button.addPerInfo{
+  background: #1AAD16;
+  color: #fff;
+  border: 2rpx solid #1AAD16;
+}
+button.subPayMon{
+  background: transparent;
+  color: #1AAD16;
+  border: 2rpx solid #1AAD16;
+}

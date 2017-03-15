@@ -1,0 +1,120 @@
+/**index.wxss**/
+page{
+  background: #F1F0F0;
+}
+.main-container{
+  width: 100%;
+  overflow: hidden;
+}
+.main-container .main-title{
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-indent: 20rpx;
+  color: #EF9C04;
+  font-size: 40rpx;
+}
+.main-container .main-con{
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+.main-container .main-con .con-container{
+  display:flex;
+  flex-wrap: wrap;
+  width: 95%;
+  background: #fff;
+  margin: 0 auto;
+  padding: 20rpx 0 40rpx 0;
+}
+.main-container .main-con .con-container .con_item{
+    display:flex;
+    width: 100%;
+    height: 100rpx;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    font-size:30rpx;
+    box-sizing:border-box;
+    border-bottom: 2rpx solid #ccc;
+}
+.main-container .main-con .con-container .con_item .con-name{
+    display: inline-block;
+    width: 30%;
+    height: 100rpx;
+    line-height: 100rpx;
+    color: #1A62E4;
+}
+.main-container .main-con .con_item .con-view{
+  width: 70%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  color: #444;
+}
+.main-container .main-con .con_item .con-input{
+    width: 70%;
+    height: 70rpx;
+    color: #444;
+    border: 2rpx solid #ccc;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+}
+.btn-container{
+  width: 100%;
+  height: 300rpx;
+}
+.btn-container button{
+  width: 95%;
+  margin: 40rpx auto;
+}
+.btn-container button.back{
+  background: transparent;
+  color: #1AAD16;
+  border: 2rpx solid #1AAD16;
+}
+.btn-container button.next{
+  background: #1AAD16;
+  color: #fff;
+  border: 2rpx solid #1AAD16;
+}
+/** 地址选择 开始 **/
+.citypicker{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: red;
+}
+.citybody {
+  position: fixed;
+  bottom: 0px;
+  background: #fff;
+}
+
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 4;
+}
+
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2FB42E
+}
+
+.section .picker {
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx;
+}

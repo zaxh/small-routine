@@ -1,0 +1,17 @@
+<!--pages/query/query.wxml-->
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <view class="main-container">
+    <text class="main-title">登记结果查询</text>
+    <view class="main">
+        <text class="title">没有人员信息</text>
+        <text class="main-desc">点击‘通过证件查询’，通过输入办理人的护照号码，登记时填写的电话号码，查询登记结果</text>
+    </view>
+  </view>
+  <view class="btn-container">
+    <button bindtap="bindQueryTap" class="query">通过证件查询</button>
+  </view>
+</view>

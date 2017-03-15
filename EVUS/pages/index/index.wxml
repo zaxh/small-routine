@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="img-container">
+    <image src="{{src}}"></image>
+  </view>
+  <view class="main-container">
+    <text class="main-title">人员列表</text>
+    <view class="main" >
+      <view class="list-item" wx:for="{{lists}}" wx:key="{{list.index}}" wx:for-item="list">
+        <text class="name">{{list.name}}</text>
+        <view class="desc">
+          <text class="fr">{{list.desc}}<text class="icon">></text></text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-container">
+    <button bindtap="addPerInfo" class="addPerInfo">添加人员信息</button>
+    <button bindtap="subPayMon" class="subPayMon">提交支付费用</button>
+  </view>
+  <view class="note-container">
+    <text>*全中文在线填写eVUS登记信息，仅需三步即可完成； </text>
+    <text>*美国使馆暂不收取eVUS登记费；中文代办服务费100元/人。 </text>
+  </view>
+</view>
+

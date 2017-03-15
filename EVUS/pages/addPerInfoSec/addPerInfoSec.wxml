@@ -1,0 +1,148 @@
+<!-- addPerInfoSec.wxml -->
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="main-container">
+      <text class="main-title">填写信息采集表</text>
+      <view class="main-con">
+        <view class="con-container">
+          <view class='con_item'>
+            <text class='con-name'>出生地</text>
+            <view class='con-view' bindtap="open">{{province}}-{{city}}-{{county}}</view>
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>现居住地城市</text>
+            <view class='con-view' bindtap="open1">{{province1}}-{{city1}}-{{county1}}</view>
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>详细地址</text>
+            <input class='con-input' type="text" placeholder="现居住地地址，到门牌号" />
+          </view>
+          <view class="con_item">
+            <view class="con-name">工作单位信息</view>
+            <picker class="con-view" bindchange="bindWorkChange" value="{{wiIndex}}" range="{{workInfo}}">
+              <view>
+                {{workInfo[wiIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>单位中文名称</text>
+            <input class='con-input' type="text" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>单位英文名称</text>
+            <input class='con-input' type="text" placeholder="如有请填写" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>单位所在城市</text>
+            <view class='con-view' bindtap="open2">{{province2}}-{{city2}}-{{county2}}</view>
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>单位地址</text>
+            <input class='con-input' type="text" placeholder="详细到门牌号" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>单位电话</text>
+            <input class='con-input' type="text" placeholder="区号+号码，选填" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>父亲姓氏</text>
+            <input class='con-input' type="text" placeholder="填写中文姓氏" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>父亲名字</text>
+            <input class='con-input' type="text" placeholder="填写中文名字" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>母亲姓氏</text>
+            <input class='con-input' type="text" placeholder="填写中文姓氏" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>母亲名字</text>
+            <input class='con-input' type="text" placeholder="填写中文名字" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>紧急联系人姓氏</text>
+            <input class='con-input' type="text" placeholder="联系人中文姓氏" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>紧急联系人名字</text>
+            <input class='con-input' type="text" placeholder="联系人中文名字" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>联系人邮箱</text>
+            <input class='con-input' type="text" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>联系人电话</text>
+            <input class='con-input' type="text" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-container">
+      <button formType="submit" class="next">下一步</button>
+      <button bindtap="back" class="back">终止填写</button>
+    </view>
+  </form>
+  
+</view>
+<!-- 地址选择 开始 -->
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<view wx:if="{{condition1}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value1}}" bindchange="bindChange1" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open1" class="city-cancel">取消</view>
+      <view bindtap="open1" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces1}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys1}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys1}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+
+<view wx:if="{{condition2}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value2}}" bindchange="bindChange2" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open2" class="city-cancel">取消</view>
+      <view bindtap="open2" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces2}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys2}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys2}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<!-- 地址选择 结束 -->

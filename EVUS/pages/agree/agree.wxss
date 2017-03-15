@@ -1,0 +1,161 @@
+/**agree.wxss**/
+@import "weui.wxss";
+page{
+  background: #F1F0F0;
+}
+.main-container{
+  width: 100%;
+  box-sizing: border-box;
+}
+.main-container .main-title{
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-indent: 20rpx;
+  color: #EF9C04;
+  font-size: 40rpx;
+}
+.main-container .main-note{
+  width: 90%;
+  height: 200rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+  margin: 20rpx auto;
+  padding: 20rpx 20rpx;
+  background: aliceblue;
+  font-size: 34rpx;
+}
+.main-container .main-note .note-item{
+  display: block;
+  width: 100%;
+  height: 50rpx;
+}
+.main-container .main-handle{
+  width: 90%;
+  height: 20rpx;
+  font-size: 30rpx;
+  color: #444;
+  padding: 40rpx 20rpx;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.main-container .main-con{
+  width: 100%;
+  min-height: 400rpx;
+  background: #fff;
+}
+.main-container .main-con .con-item{
+  width: 90%;
+  font-size: 30rpx;
+  padding: 20rpx;
+  margin: 0 atuo;
+}
+.main-container .main-con .con-item .light{
+  color: darkred;
+}
+.main-container .main-con .con-item .icon{
+  font-weight: bold;
+  color: #ccc;
+  margin-left: 10rpx;
+}
+.btn-container{
+  width: 100%;
+  height: 300rpx;
+}
+.btn-container button{
+  width: 95%;
+  margin: 40rpx auto;
+}
+.btn-container button.payment{
+  background: #1AAD16;
+  color: #fff;
+  border: 2rpx solid #1AAD16;
+}
+.btn-container button.dispayment{
+  background: transparent;
+  color: #1AAD16;
+  border: 2rpx solid #1AAD16;
+}
+/** 弹出层样式 **/
+.weui_dialog_confirm{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.weui_dialog_confirm.hide{
+  display: none !important;
+}
+.weui_dialog_confirm.show{
+  display: block !important;
+}
+.weui_dialog_confirm .weui_mask{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.6);
+}
+.weui_dialog_confirm .weui_dialog{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 400rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.weui_dialog_confirm .weui_dialog .weui_dialog_hd{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+.weui_dialog_confirm .weui_dialog .weui_dialog_bd .weui_dialog_bd_text{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ccc;
+}
+.weui_dialog_confirm .weui_dialog .weui_dialog_bd .weui_dialog_bd_text.wran{
+  color: #710D0D;
+}
+.weui_dialog_confirm .weui_dialog .weui_dialog_bd .weui_dialog_bd_input{
+  width: 90%;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 8rpx;
+  padding: 10rpx 20rpx;
+  margin: 10rpx auto;
+}
+.weui_dialog_confirm .weui_dialog .weui_dialog_bd .weui_dialog_ft{
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 75rpx;
+}
+.weui_dialog_confirm .weui_dialog_ft .weui_btn_dialog{
+  float: left;
+  height: 100%;
+  width: 50%;
+  border-radius: 0rpx;
+  background: transparent;
+}
+.weui_dialog_confirm .weui_dialog_ft.unchecked .weui_btn_dialog{
+  width: 100%;
+}
+.weui_dialog_confirm .weui_dialog_ft .weui_btn_dialog.primary{
+  color: #1AAD16;
+}

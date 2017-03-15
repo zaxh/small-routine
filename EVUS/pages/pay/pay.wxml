@@ -1,0 +1,24 @@
+<!-- pay.wxml -->
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <view class="main-container">
+    <view class="main">
+        <text class="main-title">需支付：{{money}}</text>
+        <text class="main-desc">请选择支付方式</text>
+    </view>
+  </view>
+  <view class="btn-container">
+    <view class="wx-container">
+        <view class="wx-icon-container {{onOff?'hide':''}}">
+            <image src="{{wxicon}}" bindtap="payfor"></image>
+            <text class="icon-desc">长按二维码选择“识别图中二维码”支付</text>
+            <button bindtap="weChatBack" >支付完成，返回列表</button>
+        </view>
+        <button bindtap="weChatPay" class="wx {{onOff?'':'hide'}}">微信支付该金额</button>
+    </view>
+    <button bindtap="Unionpay" class="unionpay">银联卡支付该金额</button>
+  </view>
+</view>

@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <view class="main-container">
+    <text class="main-title">待支付人员列表</text>
+    <view class="main-note">
+        <text class="note-item">美国使馆暂不收取eVUS登记费；</text>
+        <text class="note-item">中文代办服务费100元/人；</text>
+        <text class="note-item">若您拥有服务码，请点击人名后面的红字，输入服务码。</text>
+    </view>
+    <view class="main-handle">
+        <text class="handle-item fl">点击人名勾选办理人员：</text>
+        <text class="handle-item fr">点击右侧绑定服务码</text>
+    </view>
+    <view class="main-con">
+      <view class="con-item">
+        <checkbox-group bindchange="checkboxChange">
+          <label class="weui-cell weui-check__label" wx:for="{{checkboxItems}}" wx:key="{{item.value}}">
+              <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+
+              <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                  <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                  <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+              </view>
+              <view class="weui-cell__bd">{{item.name}}</view>
+              <view class="fr" bindtap="bindCodeTap">
+                需支付100元，<text class="light">点击绑定服务码</text><text class="icon">></text>
+              </view>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+  <view class="btn-container">
+    <button bindtap="payment" class="payment">确认支付</button>
+    <button bindtap="dispayment" class="dispayment">暂不支付</button>
+  </view>
+  <!--绑定服务码弹出框 开始 -->
+  <view class="weui_dialog_confirm {{dialog?'hide':'show'}}" >
+    <view class="weui_mask"></view>
+    <view class="weui_dialog">
+      <view class="weui_dialog_hd">输入服务密码</view>
+      <view class="weui_dialog_bd">
+        <text class="weui_dialog_bd_text">一个服务码限使用一次，减免一人登记服务费</text>
+        <form bindsubmit="formSubmit" bindreset="formReset">
+          <input name="input" class="weui_dialog_bd_input" type="text" focus="true" value="" />
+          <view class="weui_dialog_ft">
+            <button formType="reset" class="weui_btn_dialog" >取消</button>
+            <button formType="submit" class="weui_btn_dialog primary">确定</button>
+          </view>
+        </form>
+      </view>   
+    </view>
+  </view>
+  <!--绑定服务码弹出框 结束-->
+</view>

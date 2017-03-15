@@ -1,0 +1,17 @@
+<!--pages/queryByCert/queryByCert.wxml-->
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <view class="main-container">
+    <text class="main-title">登记结果查询</text>
+    <view class="main">
+        <text class="title">1.请输入查询人员的护照号码：</text>
+        <input class="input"/>
+    </view>
+  </view>
+  <view class="btn-container">
+    <button bindtap="bindBackTap" class="back">返回</button>
+  </view>
+</view>

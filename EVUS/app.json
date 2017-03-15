@@ -1,0 +1,20 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/addPerInfo/addPerInfo",
+    "pages/addPerInfoSec/addPerInfoSec",
+    "pages/addPerInfoThr/addPerInfoThr",
+    "pages/addPerInfoEnd/addPerInfoEnd",
+    "pages/subPayMon/subPayMon",
+    "pages/agree/agree",
+    "pages/pay/pay",
+    "pages/query/query",
+    "pages/queryByCert/queryByCert"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "eVUS提交申请"
+  }
+}

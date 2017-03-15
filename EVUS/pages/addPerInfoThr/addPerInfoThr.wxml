@@ -1,0 +1,110 @@
+<view class="container">
+  <view class="img-container">
+    <text class="button" bindtap="bindIndexTap">{{back}}</text>
+    <image src="{{src}}"></image>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="main-container">
+      <text class="main-title">填写信息采集表</text>
+      <view class="main-con">
+        <view class="con-container">
+          <view class='con_item'>
+            <text class='con-name'>最新的护照号</text>
+            <input class='con-input' type="text" placeholder="9位字符" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>姓氏的拼音</text>
+            <input class='con-input' type="text" placeholder="按照护照英文填写" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>名字拼音</text>
+            <input class='con-input' type="text" placeholder="按照护照英文填写" />
+          </view>
+          <view class="section">
+            <view class="section__title">护照签发日期</view>
+            <picker mode="date" value="{{issueDate}}" start="1900-01-01" end="2200-01-01" bindchange="issueDateChange">
+              <view class="picker">
+                {{issueDate}}
+              </view>
+            </picker>
+          </view>
+          <view class="section">
+            <view class="section__title">护照到期日期</view>
+            <picker mode="date" value="{{expireDate}}" start="1900-01-01" end="2200-01-01" bindchange="expireDateChange">
+              <view class="picker">
+                {{expireDate}}
+              </view>
+            </picker>
+          </view>
+          <view class="section">
+            <view class="section__title">签证所在护照 </view>
+            <picker bindchange="bindVPChange" value="{{vpIndex}}" range="{{visaPassport}}">
+              <view class="picker">
+                {{visaPassport[vpIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>美国签证号</text>
+            <input class='con-input' type="text" placeholder="签证页右下角红色字符" />
+          </view>
+          <view class="section">
+            <view class="section__title">在美联系人</view>
+            <picker bindchange="bindUCChange" value="{{ucIndex}}" range="{{usContact}}">
+              <view class="picker">
+                {{usContact[ucIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>联系人</text>
+            <input class='con-input' type="text" placeholder="应为填写人名或酒店名" />
+          </view>
+          <view class="section">
+            <view class="section__title">美国州</view>
+            <picker bindchange="bindUSChange" value="{{USIndex}}" range="{{US}}">
+              <view class="picker">
+                {{US[USIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>美国城市</text>
+            <input class='con-input' type="text" placeholder="英文填写联系人所在城市" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>美国地址</text>
+            <input class='con-input' type="text" placeholder="英文填写联系人地址" />
+          </view>
+          <view class='con_item'>
+            <text class='con-name'>联系人电话</text>
+            <input class='con-input' type="text" placeholder="区号+电话" />
+          </view>
+          <view class="section">
+            <view class="section__title">是否被拒签过</view>
+            <picker bindchange="bindIRChange" value="{{reIndex}}" range="{{isRefused}}">
+              <view class="picker">
+                {{isRefused[reIndex]}}
+              </view>
+            </picker>
+          </view>
+          <view class="section_container">
+            <text class="section__con_title">您是否在2011年3月11日后去过伊拉克、叙利亚、伊朗、苏丹、利比亚、索马里或也门？</text>
+            <view class="section">
+              <view class="section__title">选择是否去过</view>
+              <picker bindchange="bindGoChange" value="{{goIndex}}" range="{{isGo}}">
+                <view class="picker">
+                  {{isGo[goIndex]}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-container">
+      <button formType="submit" class="next">下一步</button>
+      <button bindtap="back" class="back">终止填写</button>
+    </view>
+  </form>
+</view>
